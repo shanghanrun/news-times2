@@ -19,7 +19,13 @@ const getLatestNews = async () => {
         `https://third-js-project-sw-copy.netlify.app/top-headlines?country=kr&pageSize=${pageSize}&page=${page}${category}${keyword}`
     ); // 리펙토링
 
-    const response = await fetch(url);
+    const response = await fetch(url, {
+      method: 'GET',
+      headers: {
+        'Upgrade' : 'h2c',
+        'Connection': 'Upgrade'
+      }
+    });
     const data = await response.json();
     news = data.articles;
     console.log("ddd", news);
