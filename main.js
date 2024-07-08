@@ -3,7 +3,7 @@
 let news = [];
 const getLatestNews = async () => {
     // const url = new URL(`https://newsapi.org/v2/top-headlines?country=us&apiKey=${API_KEY}`);
-    let url = `https://chic-nasturtium-fd9a30.netlify.app/top-headlines`
+    let url = `https://beautiful-selkie-5be2a6.netlify.app/top-headlines`
     //new URL : url 인스턴스를 새로만든다
     const response = await fetch(url);
     const data = await response.json();
