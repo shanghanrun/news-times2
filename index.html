@@ -4,9 +4,75 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
+    <link href='https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css' rel='stylesheet'
+        integrity='sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN' crossorigin='anonymous'>
+    <link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons">
     <link rel="stylesheet" href="style.css">
 </head>
 <body>
+    <section class="container">
+        <i class="fa-solid fa-magnifying-glass disabled" id="search-icon" onclick="toggleInput()"></i>
+        <div class="side">
+            <div id="mySidenav" class="sidenav">
+                <a href="javascript:void(0)" class="closebtn" onclick="closeNav()">&times;</a>
+                <a href="#" id="category-title">TOPICS</a>
+                <a href="#" onclick="getCategory('business')">Business</a>
+                <a href="#" onclick="getCategory('entertainment')">Entertainment</a>
+                <a href="#" onclick="getCategory('general')">General</a>
+                <a href="#" onclick="getCategory('health')">Health</a>
+                <a href="#" onclick="getCategory('science')">Science</a>
+                <a href="#" onclick="getCategory('sports')">Sports</a>
+                <a href="#" onclick="getCategory('technology')">Technology</a>
+            </div>
+            <div style="font-size:30px;cursor:pointer" id="hamburger" onclick="openNav()">&#9776;</div>
+        </div>
+        <section>
+            <div class="head-line">
+                <div class="search-container">
+                    <input type="text" id="search-input" disabled />
+                    <button id="search" onclick="search()" disabled>검색</button>
+                </div>
+                <img id="head-img" src="noonatimes2.png" alt="누나타임즈" />
+                <div id="date"></div>
+            </div>
+            <div class="menus">
+                <button onclick="getCategory('business')" id="business">Business</button>
+                <button onclick="getCategory('entertainment')" id="entertainment">Entertainment</button>
+                <button onclick="getCategory('general')" id="general">General</button>
+                <button onclick="getCategory('health')" id="health">Health</button>
+                <button onclick="getCategory('science')" id="science">Science</button>
+                <button onclick="getCategory('sports')" id="sports">Sports</button>
+                <button onclick="getCategory('technology')" id="technology">Technology</button>
+            </div>
+        </section>
+    
+        <section id="news-board">
+    
+    
+        </section>
+        <nav aria-label="Page navigation example">
+            <ul class="pagination">
+    
+            </ul>
+        </nav>
+    </section>
+
+
+
+    <script src='https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js'
+        integrity='sha384-C6RzsynM9kWDrMNeT87bh95OGNyZPhcTNXj1NW7RuBCsyN/o0jlpcV8Qyq46cDfL'
+        crossorigin='anonymous'></script>
+    <script src='https://kit.fontawesome.com/2852ddf98d.js' crossorigin='anonymous'></script>
+
+    <script>
+        function openNav() {
+            document.getElementById("mySidenav").style.width = "250px";
+        }
+
+        function closeNav() {
+            document.getElementById("mySidenav").style.width = "0";
+        }
+    </script>
     <script src="main.js"></script>
 </body>
 </html>
